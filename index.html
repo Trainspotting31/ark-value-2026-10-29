@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>火山方舟模型性价比排行 · 2026-10-29</title>
+<style>
+:root{--primary:#6E8899;--primary-d:#4A606E;--accent:#C4956E;--accent-d:#A87653;
+--bg:#FAFAF8;--ink:#2E3A40;--muted:#6A737A;--line:#E5E2DC;--ok:#4E7A5B;--bad:#A0522D;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.72;font-size:16px;
+font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.hero{background:linear-gradient(135deg,#5A7484,#6E8899 55%,#8AA0AE);color:#fff;padding:52px 24px 44px}
+.wrap{max-width:860px;margin:0 auto}
+.pill{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.34);
+border-radius:999px;padding:4px 13px;font-size:12.5px;margin-bottom:18px}
+.hero h1{margin:0 0 12px;font-size:30px;line-height:1.32}
+.hero p{margin:0;font-size:15px;opacity:.93;max-width:660px}
+main{max-width:860px;margin:0 auto;padding:0 24px 72px}
+section{margin-top:42px}
+h2{font-size:20px;margin:0 0 6px}
+.sub{color:var(--muted);font-size:13.5px;margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:600;font-size:12.5px;color:var(--muted);padding:0 8px 10px 0;
+border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 8px 10px 0;border-bottom:1px solid #F1EFEA;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+.ok{color:var(--ok);font-weight:600}
+.bad{color:var(--bad);font-weight:600}
+.mid{color:var(--accent-d);font-weight:600}
+.note{background:#F7F4EF;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+padding:14px 18px;font-size:14.5px;margin:14px 0}
+.warn{background:#FBF1EE;border-left:3px solid var(--bad);border-radius:0 8px 8px 0;
+padding:14px 18px;font-size:14.5px;margin:14px 0}
+.verdict{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--primary);
+border-radius:0 12px 12px 0;padding:18px 22px;margin:16px 0}
+.rank{display:inline-block;min-width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;
+background:var(--primary);color:#fff;font-size:13px;font-weight:700;margin-right:9px;padding:0 4px}
+.rank.b{background:var(--accent)}.rank.c{background:#B9B4AA}
+footer{max-width:860px;margin:0 auto;padding:24px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line)}
+@media(max-width:680px){.hero{padding:38px 20px 34px}.hero h1{font-size:24px}main{padding:0 18px 56px}
+table{font-size:12.5px}.hide-sm{display:none}}
+</style></head><body>
+
+<div class="hero"><div class="wrap">
+<span class="pill">实测 + 真实单价 · 2026-10-29</span>
+<h1>你手上的方舟模型，哪个性价比最高</h1>
+<p>用官方目录价（含你的账号折扣）× 我实测的响应速度 × arena 公开榜分数，算一个「每元钱买到多少能力」。</p>
+</div></div>
+
+<main>
+
+<section>
+<h2>结论先说</h2>
+<div class="verdict">
+<p><span class="rank">1</span><strong>日常继续用 deepseek-v4-1-flash</strong>：输出 8 元/百万 token，arena 总榜 #38（1475 分），实测三关全过、平均 <strong>1.2 秒</strong>——是这批里唯一"又快又不笨又不贵"的。</p>
+</div>
+<div class="verdict">
+<p><span class="rank b">2</span><strong>简单活儿切 doubao-seed-2.0-mini</strong>：输出只要 <strong>2 元/百万</strong>，是 flash 的 1/4。写摘要、改标题、翻译这种不需要深想的事，用它最省，实测 3.8 秒也够快。</p>
+</div>
+<div class="verdict">
+<p><span class="rank c">3</span><strong>硬骨头再上 glm / kimi</strong>：deepseek-v4-pro 27 元/M、kimi-k3.1-pro 68 元/M——贵 3~8 倍，能力只多 10 分。只在真卡住时用，别当日常。</p>
+</div>
+</section>
+
+<section>
+<h2>算出来的排行（按"每元钱买到的能力分"）</h2>
+<p class="sub">公式：arena 分数 ÷ 输出单价（元/百万 token）。数字越大越划算。价格为官方目录价，单位元/百万 token。</p>
+<div class="card"><table>
+<tr><th>模型</th><th class="num">输出价</th><th class="num">输入价</th><th class="num">实测速度</th>
+<th class="num">arena</th><th class="num">名次</th><th class="num">性价比</th><th class="hide-sm">备注</th></tr>
+<tr><td class="mono">glm-5-3-flash</td><td class="num">2.8</td><td class="num">0.8</td><td class="num mid">8.1s</td><td class="num">1474</td><td class="num">#41</td><td class="num"><span class="ok">526</span></td><td class="hide-sm">中文指令实测输出为空</td></tr><tr><td class="mono">deepseek-v4-1-flash-economy</td><td class="num">6.4</td><td class="num">1.6</td><td class="num ok">2.4s</td><td class="num">1475</td><td class="num">#38</td><td class="num"><span class="ok">230</span></td><td class="hide-sm">省钱版，能力同 flash</td></tr><tr><td class="mono">deepseek-v4-1-flash</td><td class="num">8.0</td><td class="num">2.0</td><td class="num ok">1.2s</td><td class="num">1475</td><td class="num">#38</td><td class="num"><span class="ok">184</span></td><td class="hide-sm">当前主力，速度断层第一</td></tr><tr><td class="mono">deepseek-v4-pro-ga</td><td class="num">27.0</td><td class="num">9.0</td><td class="num mid">5.1s</td><td class="num">1465</td><td class="num">#56</td><td class="num"><span class="bad">54</span></td><td class="hide-sm">Pro 档</td></tr><tr><td class="mono">kimi-k3-1-pro</td><td class="num">68.0</td><td class="num">13.0</td><td class="num mid">8.1s</td><td class="num">1487</td><td class="num">#18</td><td class="num"><span class="bad">22</span></td><td class="hide-sm">最强但最贵；需 temperature=1</td></tr><tr><td class="mono">doubao-seed-2.0-mini</td><td class="num">2.0</td><td class="num">0.2</td><td class="num mid">3.8s</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="mid">无榜</span></td><td class="hide-sm">豆包轻量；三关全过</td></tr><tr><td class="mono">doubao-seed-evolving</td><td class="num">30.0</td><td class="num">6.0</td><td class="num bad">13.6s</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="mid">无榜</span></td><td class="hide-sm">最慢</td></tr><tr><td class="mono">doubao-seed-2-1-pro</td><td class="num">30.0</td><td class="num">6.0</td><td class="num bad">13.2s</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="mid">无榜</span></td><td class="hide-sm">慢且贵</td></tr>
+</table></div>
+<div class="note"><strong>为什么用输出价当分母</strong>：agent 类任务（写代码、改文件、跑工具）的输出 token 远多于输入，真正烧钱的是输出。输入价只在你喂长文档时才重要。</div>
+</section>
+
+<section>
+<h2>三个必须知道的偏差</h2>
+<div class="card">
+<p><strong>① glm-5-3-flash 的性价比数字最好看（526 分/元），但它是陷阱。</strong>它输出只要 2.8 元/M、arena #41 也不差，可我实测它"中文指令遵循"这一项<strong>返回空内容</strong>——推理把 token 预算吃光了。便宜但会坑你。</p>
+<p><strong>② doubao 三兄弟（mini / evolving / 2-1-pro）没上 arena 榜。</strong>不是它们弱，是榜单还没收录。它们的真实能力只能看实测：mini 三关全过，evolving 也全过但慢到 13.6 秒。没榜就没法算分，我不给它们编名次。</p>
+<p style="margin-bottom:0"><strong>③ kimi-k3.1-pro 是最贵的，也是唯一会让 Hermes 崩的。</strong>68 元/M，而且只接受 <code>temperature=1</code>，Hermes 默认发 0 会直接 400。能力和价格都排第一（反向）。</p>
+</div>
+</section>
+
+<section>
+<h2>套餐用户的特殊算法</h2>
+<div class="warn"><strong>你在 Coding Plan 里，token 单价不是直接掏的钱。</strong>套餐按 AFP 额度扣，扣多少跟"token 量 × 模型档位"大致成正比。所以对你来说，"性价比"= <strong>同样的额度能换到多少活</strong>，结论跟按量计费一致：用便宜档的 flash / mini 打主力，贵档留着攻坚。</div>
+<div class="card">
+<p style="margin-top:0"><strong>省额度的两个实操点：</strong></p>
+<p>① 长会话保持同一个模型别乱切——火山对 <code>ark-code-latest</code> 有服务端自动前缀缓存（实测命中 99.9%），切换模型等于把缓存全废掉，输入 token 重算一遍。</p>
+<p style="margin-bottom:0">② 别用 <code>ark-code-latest</code> 当主力。它是<strong>自动路由别名</strong>，每次落到哪个模型不确定，实测 7.3 秒——既不知道吃的哪档额度，也拿不到最优速度。</p>
+</div>
+</section>
+
+<section>
+<h2>数据来源</h2>
+<div class="card" style="font-size:14px">
+<ul style="margin:0">
+<li><strong>单价</strong>：火山方舟官方定价目录，经 <code>arkcli pricing models --modality LLM</code> 实时拉取（含当前账号折扣），共 18 个模型</li>
+<li><strong>速度</strong>：2026-10-29 对同一组三项测试（工具调用 / 中文指令遵循 / 写代码）各发一次请求取平均耗时</li>
+<li><strong>arena 名次</strong>：arena.ai 公开竞技场文本总榜（416 个模型盲测）</li>
+</ul>
+</div>
+</section>
+
+</main>
+<footer>整理于 2026-10-29 · 价格随官方调整可能变化，查实时价：<code>arkcli pricing models --modality LLM</code><br>
+安巢评 · 不收机构一分钱，只帮你把东西看明白</footer>
+</body></html>
